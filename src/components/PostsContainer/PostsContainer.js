@@ -8,7 +8,7 @@ function PostsContainer() {
   const featuredPosts = useGetPosts(3)
   const postSectionTwoPosts = useGetPosts(4)
   const postSectionThreePosts = useGetPosts(6)
-
+  
   return (
     <div>
       <div>
