@@ -21,7 +21,7 @@ function PostSection(props) {
       {posts.map((post, _) => {
         return (
           <div>
-            <Post postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={() => onPostClick}></Post>
+            <Post postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
           </div>
         )
       })}

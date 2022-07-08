@@ -11,7 +11,7 @@ function Post(props) {
   } = props
 
   return (
-    <button onClick={onClick}>
+    <button onClick={() => onClick()}>
       <img src={postImageURL} alt=""/>
       <div>
         <span>{postTopic}</span>

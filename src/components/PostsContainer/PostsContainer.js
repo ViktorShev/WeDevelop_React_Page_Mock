@@ -12,13 +12,13 @@ function PostsContainer() {
   return (
     <div>
       <div>
-        <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={featuredPosts} onPostClick={() => onPostClick}></PostSection>
+        <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={featuredPosts} onPostClick={onPostClick}></PostSection>
       </div>
       <div>
-        <PostSection postSectionTitle="PROJECTS" postsTopic="Business Research" posts={postSectionTwoPosts} onPostClick={() => onPostClick}></PostSection>
+        <PostSection postSectionTitle="PROJECTS" postsTopic="Business Research" posts={postSectionTwoPosts} onPostClick={onPostClick}></PostSection>
       </div>
       <div>
-        <PostSection postSectionTitle="TECHNOLOGIES & TRENDS" postsTopic="Coding" posts={postSectionThreePosts} onPostClick={() => onPostClick}></PostSection>
+        <PostSection postSectionTitle="TECHNOLOGIES & TRENDS" postsTopic="Coding" posts={postSectionThreePosts} onPostClick={onPostClick}></PostSection>
       </div>
     </div> 
   )
