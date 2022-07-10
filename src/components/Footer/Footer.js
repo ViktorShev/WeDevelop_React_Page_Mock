@@ -40,42 +40,42 @@ function Footer(props) {
       <div>
         <div>
           <span>COMPANY</span>
-          <a href='#'>About us</a>
-          <a href='#'>Our Team</a>
-          <a href='#'>Blog</a>
-          <a href='#'>Career</a>
+          <a href='/'>About us</a>
+          <a href='/'>Our Team</a>
+          <a href='/'>Blog</a>
+          <a href='/'>Career</a>
         </div>
         <div>
           <span>SERVICES</span>
-          <a href='#'>Web Development</a>
-          <a href='#'>Staff Augmentation</a>
-          <a href='#'>Tailor Made</a>
+          <a href='/'>Web Development</a>
+          <a href='/'>Staff Augmentation</a>
+          <a href='/'>Tailor Made</a>
         </div>
         <div>
           <span>Technologies</span>
-          <a href="#">React</a>
-          <a href="#">Node.js</a>
-          <a href="#">Python</a>
-          <a href="#">AWS</a>
-          <a href="#">GraphQL</a>
+          <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
+          <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">Node.js</a>
+          <a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a>
+          <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">AWS</a>
+          <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>
         </div>
         <div>
-          <a href="#">Ruby on Rails</a>
-          <a href="#">PostgreSQL</a>
-          <a href="#">MongoDB</a>
+          <a href="https://rubyonrails.org/" >Ruby on Rails</a>
+          <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a>
+          <a href="https://www.mongodb.com/en" target="_blank" rel="noreferrer">MongoDB</a>
         </div>
         <div>
-          <a href="#">See More</a>
+          <a href="/">See More</a>
           <img src={footerLinkDecorationImagesSource.arrow} alt="" />
         </div>
         <div>
           <span>CONTACT US</span>
           <img src={footerLinkDecorationImagesSource.email} alt=""/>
-          <a href="#">info@wedevelop.me</a>
+          <a href="/">info@wedevelop.me</a>
           <img src={footerLinkDecorationImagesSource.location} alt="" />
-          <a href="#">WeDevelop LLC FL 33134, US</a>
+          <a href="/">WeDevelop LLC FL 33134, US</a>
           <img src={footerLinkDecorationImagesSource.phone} alt="" />
-          <a href="#">+1 (925) 448-6165</a>
+          <a href="/">+1 (925) 448-6165</a>
         </div>
       </div>
       <div>
