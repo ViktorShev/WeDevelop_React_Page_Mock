@@ -1,4 +1,5 @@
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb.js";
+import NewsletterContainer from "../../components/NewsletterContainer/NewsletterContainer.js";
 import PostsContainer from "../../components/PostsContainer/PostsContainer.js";
 
 export default function Homepage() {
@@ -12,6 +13,7 @@ export default function Homepage() {
         ]}>
       </Breadcrumb>
       <PostsContainer></PostsContainer>
+      <NewsletterContainer></NewsletterContainer>
     </div>
   )
 }
