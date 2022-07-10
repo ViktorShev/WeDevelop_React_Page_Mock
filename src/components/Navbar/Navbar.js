@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Navbar(props) {
   const {
-    iconImageSource,
+    NavbarIconSource,
     links,
     onGetInTouchButtonClick
   } = props
@@ -11,7 +11,7 @@ function Navbar(props) {
   return (
     <div>
       <div>
-        <button><img src={iconImageSource} alt="" /></button>
+        <img src={NavbarIconSource} alt="" />
       </div>
       <div>
         {links.map((link, _) => {
@@ -26,7 +26,7 @@ function Navbar(props) {
 }
 
 Navbar.propTypes = {
-  iconImageSource: PropTypes.string,
+  NavbarIconSource: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.shape({
     linkName: PropTypes.string,
     url: PropTypes.string

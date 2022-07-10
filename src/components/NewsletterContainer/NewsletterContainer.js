@@ -9,7 +9,7 @@ function NewsletterContainer() {
   }
 
   return (
-    <NewsletterSubscriptionForm onSubscribeButtonClick={onSubscribeButtonClick}></NewsletterSubscriptionForm>
+    <NewsletterSubscriptionForm onSubscribeButtonClick={onSubscribeButtonClick} />
   )
 }
 

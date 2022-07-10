@@ -1,10 +1,11 @@
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb.js";
+import Layout from "../../components/Layout/Layout.js";
 import NewsletterContainer from "../../components/NewsletterContainer/NewsletterContainer.js";
 import PostsContainer from "../../components/PostsContainer/PostsContainer.js";
 
 export default function Homepage() {
   return (
-    <div>
+    <Layout>
       <Breadcrumb categories={[
         {categoryName: 'COVID-19', url: '#'},
         {categoryName: 'Business Research', url: '#'},
@@ -12,8 +13,8 @@ export default function Homepage() {
         {categoryName: 'Coding', url: '#'}
         ]}>
       </Breadcrumb>
-      <PostsContainer></PostsContainer>
-      <NewsletterContainer></NewsletterContainer>
-    </div>
+      <PostsContainer />
+      <NewsletterContainer />
+    </Layout>
   )
 }

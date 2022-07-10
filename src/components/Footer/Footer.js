@@ -4,10 +4,10 @@ import lodash from 'lodash'
 
 function Footer(props) {
   const {
-    footerTopImagesURLs,
-    footerIconURL,
+    footerTopImagesSource,
+    footerIconSource,
     footerLinkDecorationImagesSource,
-    revieweesIconURL,
+    revieweesIconSource,
     rating,
     socialMedia
   } = props
@@ -15,14 +15,12 @@ function Footer(props) {
   return (
     <div>
       <div>
-        {footerTopImagesURLs.map((url, _) => {
+        {footerTopImagesSource.map((url, _) => {
           return <img src={url} alt="" />
         })}
       </div>
       <div>
-        <button>
-          <img src={footerIconURL} alt="" />
-        </button>
+        <img src={footerIconSource} alt="" />
       </div>
       <div>
         <span>REVIEWED ON</span>
@@ -34,9 +32,10 @@ function Footer(props) {
         {lodash.times((rating.rating)).map(() => {
           return <img src={rating.ratingStarImgSource} alt="" />
         })}
+        <span>4 reviews</span>
       </div>
       <div>
-        <img src={revieweesIconURL} alt="" />
+        <img src={revieweesIconSource} alt="" />
       </div>
       <div>
         <div>
@@ -71,12 +70,12 @@ function Footer(props) {
         </div>
         <div>
           <span>CONTACT US</span>
-          <a href="#">info@wedevelop.me</a>
           <img src={footerLinkDecorationImagesSource.email} alt=""/>
-          <a href="#">WeDevelop LLC FL 33134, US</a>
+          <a href="#">info@wedevelop.me</a>
           <img src={footerLinkDecorationImagesSource.location} alt="" />
-          <a href="#">+1 (925) 448-6165</a>
+          <a href="#">WeDevelop LLC FL 33134, US</a>
           <img src={footerLinkDecorationImagesSource.phone} alt="" />
+          <a href="#">+1 (925) 448-6165</a>
         </div>
       </div>
       <div>
@@ -92,7 +91,7 @@ function Footer(props) {
 }
 
 Footer.propTypes = {
-  footerTopImagesURLs: PropTypes.arrayOf(PropTypes.string),
+  footerTopImagesSource: PropTypes.arrayOf(PropTypes.string),
   footerIconSource: PropTypes.string,
   footerLinkDecorationImagesSource: PropTypes.objectOf(PropTypes.string),
   revieweesIconSource: PropTypes.string,
