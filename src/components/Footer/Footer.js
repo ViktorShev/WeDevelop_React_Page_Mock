@@ -6,7 +6,7 @@ function Footer(props) {
   const {
     footerTopImagesSource,
     footerIconSource,
-    footerLinkDecorationImagesSource,
+    footerLinkDecorationImagesSource: footerLinkDecorationImages,
     revieweesIconSource,
     rating,
     socialMedia
@@ -66,15 +66,15 @@ function Footer(props) {
         </div>
         <div>
           <a href="/">See More</a>
-          <img src={footerLinkDecorationImagesSource.arrow} alt="" />
+          <img src={footerLinkDecorationImages.arrow} alt="" />
         </div>
         <div>
           <span>CONTACT US</span>
-          <img src={footerLinkDecorationImagesSource.email} alt=""/>
+          <img src={footerLinkDecorationImages.email} alt=""/>
           <a href="/">info@wedevelop.me</a>
-          <img src={footerLinkDecorationImagesSource.location} alt="" />
+          <img src={footerLinkDecorationImages.location} alt="" />
           <a href="/">WeDevelop LLC FL 33134, US</a>
-          <img src={footerLinkDecorationImagesSource.phone} alt="" />
+          <img src={footerLinkDecorationImages.phone} alt="" />
           <a href="/">+1 (925) 448-6165</a>
         </div>
       </div>
@@ -93,7 +93,7 @@ function Footer(props) {
 Footer.propTypes = {
   footerTopImagesSource: PropTypes.arrayOf(PropTypes.string),
   footerIconSource: PropTypes.string,
-  footerLinkDecorationImagesSource: PropTypes.objectOf(PropTypes.string),
+  footerLinkDecorationImages: PropTypes.objectOf(PropTypes.string),
   revieweesIconSource: PropTypes.string,
   rating: PropTypes.shape({
     rating: PropTypes.number,

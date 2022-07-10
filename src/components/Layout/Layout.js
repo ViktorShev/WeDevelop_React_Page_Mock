@@ -29,11 +29,11 @@ function Layout(props) {
     <div>
       <Navbar 
         NavbarIconSource={wedevelopLogo} links={[
-        {linkName: 'Services', url: '#'},
-        {linkName: 'About us', url: '#'},
-        {linkName: 'Testimonials', url: '#'},
-        {linkName: 'Blog', url: '#'},
-        {linkName: 'Career', url: '#'}
+        {linkName: 'Services', url: '/'},
+        {linkName: 'About us', url: '/'},
+        {linkName: 'Testimonials', url: '/'},
+        {linkName: 'Blog', url: '/'},
+        {linkName: 'Career', url: '/'}
         ]} 
         onGetInTouchButtonClick={onGetInTouchButtonClick}
         />
