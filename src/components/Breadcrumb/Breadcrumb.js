@@ -10,7 +10,7 @@ function Breadcrumb(props) {
     <div>
       <span>Categories: </span>
       {categories.map((category, _) => {
-        return <button onClick={() => category.onClick()}>{category.categoryName}</button>
+        return <a href={category.url}><button>{category.categoryName}</button></a>
       })}
     </div>
   )
@@ -19,7 +19,7 @@ function Breadcrumb(props) {
 Breadcrumb.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.shape({
     categoryName: PropTypes.string,
-    onClick: PropTypes.func
+    url: PropTypes.string
   }))
 }
 

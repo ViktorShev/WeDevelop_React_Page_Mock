@@ -1,4 +1,4 @@
-import randomListItem from '../utils/randomListItem'
+import randomListItem from '../utils/randomListItem.js'
 
 export default function useGetPosts (numberOfPosts) {
   const posts = []

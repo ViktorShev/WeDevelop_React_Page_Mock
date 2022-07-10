@@ -5,10 +5,10 @@ export default function Homepage() {
   return (
     <div>
       <Breadcrumb categories={[
-        {categoryName: 'COVID-19', onClick: () => console.log('A category has been clicked!')},
-        {categoryName: 'Business Research', onClick: () => console.log('A category has been clicked!')},
-        {categoryName: 'Management', onClick: () => console.log('A category has been clicked!')},
-        {categoryName: 'Coding', onClick: () => console.log('A category has been clicked!')}
+        {categoryName: 'COVID-19', url: '#'},
+        {categoryName: 'Business Research', url: '#'},
+        {categoryName: 'Management', url: '#'},
+        {categoryName: 'Coding', url: '#'}
         ]}>
       </Breadcrumb>
       <PostsContainer></PostsContainer>
