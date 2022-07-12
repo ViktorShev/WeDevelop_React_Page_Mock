@@ -11,7 +11,7 @@ function Navbar(props) {
   return (
     <div>
       <div>
-        <img src={NavbarIconSource} alt="" />
+        <a href='https://blog.wedevelop.me/' target='_blank' rel='noreferrer'><img src={NavbarIconSource} alt="" /></a>
       </div>
       <div>
         {links.map((link, _) => {

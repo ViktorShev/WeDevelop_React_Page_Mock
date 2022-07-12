@@ -35,7 +35,7 @@ function Footer(props) {
         <span>4 reviews</span>
       </div>
       <div>
-        <img src={revieweesIconSource} alt="" />
+        <a href='https://clutch.co/profile/wedevelop?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo#summary' target='_blank' rel='noreferrer'><img src={revieweesIconSource} alt="" /></a>
       </div>
       <div>
         <div>

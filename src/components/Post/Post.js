@@ -7,7 +7,7 @@ function Post(props) {
     postTitle,
     postAuthor,
     postImageURL,
-    onClick
+    onClick,
   } = props
 
   return (
