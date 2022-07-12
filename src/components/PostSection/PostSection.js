@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import Post from '../Post/Post.js'
+import PropTypes from 'prop-types';
+import Post from '../Post/Post.js';
 
 
 function PostSection(props) {
@@ -7,6 +7,7 @@ function PostSection(props) {
     postSectionTitle,
     postsTopic,
     posts,
+    viewAllButton,
     onPostClick
   } = props
 
@@ -23,6 +24,7 @@ function PostSection(props) {
             <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
         )
       })}
+      {viewAllButton}
     </div>
   )
 }
@@ -36,7 +38,8 @@ PostSection.propTypes = {
     postAuthor: PropTypes.string,
     postImageURL: PropTypes.string
   })),
-  onPostClick: PropTypes.func
+  viewAllButton: PropTypes.oneOfType([PropTypes.element, PropTypes.oneOf([null])]),
+  onPostClick: PropTypes.func.isRequired
 }
 
 export default PostSection

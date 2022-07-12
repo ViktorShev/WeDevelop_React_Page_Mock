@@ -1,20 +1,20 @@
-import PropTypes from 'prop-types'
-import Footer from '../Footer/Footer.js'
-import Navbar from '../Navbar/Navbar.js'
-import useGetRating from '../../hooks/useGetRating.js'
-import footerTopImg1 from '../../img/footerTopImg1.png'
-import footerTopImg2 from '../../img/footerTopImg2.png'
-import footerTopImg3 from '../../img/footerTopImg3.png'
-import footerTopImg4 from '../../img/footerTopImg4.png'
-import clutch from '../../img/clutch.png'
-import wedevelopLogo from '../../img/wedevelopLogo.svg'
-import arrow from '../../img/arrow.png'
-import email from '../../img/email.png'
-import location from '../../img/location.png'
-import phone from '../../img/phone.png'
-import linkedin from '../../img/linkedin.png'
-import facebook from '../../img/facebook.png'
-import instagram from '../../img/instagram.png'
+import PropTypes from 'prop-types';
+import Footer from '../Footer/Footer.js';
+import Navbar from '../Navbar/Navbar.js';
+import useGetRating from '../../hooks/useGetRating.js';
+import footerTopImg1 from '../../img/footerTopImg1.png';
+import footerTopImg2 from '../../img/footerTopImg2.png';
+import footerTopImg3 from '../../img/footerTopImg3.png';
+import footerTopImg4 from '../../img/footerTopImg4.png';
+import clutch from '../../img/clutch.png';
+import wedevelopLogo from '../../img/wedevelopLogo.svg';
+import arrow from '../../img/arrow.png';
+import email from '../../img/email.png';
+import location from '../../img/location.png';
+import phone from '../../img/phone.png';
+import linkedin from '../../img/linkedin.png';
+import facebook from '../../img/facebook.png';
+import instagram from '../../img/instagram.png';
 
 
 

@@ -11,7 +11,7 @@ function Navbar(props) {
   return (
     <div>
       <div>
-        <a href='https://blog.wedevelop.me/' target='_blank' rel='noreferrer'><img src={NavbarIconSource} alt="" /></a>
+        <a href='/'><img src={NavbarIconSource} alt="" /></a>
       </div>
       <div>
         {links.map((link, _) => {
@@ -31,7 +31,7 @@ Navbar.propTypes = {
     linkName: PropTypes.string,
     url: PropTypes.string
   })),
-  onGetInTouchButtonClick: PropTypes.func
+  onGetInTouchButtonClick: PropTypes.func.isRequired
 }
 
 export default Navbar

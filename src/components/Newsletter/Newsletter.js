@@ -21,7 +21,7 @@ function NewsletterSubscriptionForm(props) {
 }
 
 NewsletterSubscriptionForm.propTypes = {
-  onSubscribeButtonClick: PropTypes.func
+  onSubscribeButtonClick: PropTypes.func.isRequired
 }
 
 export default NewsletterSubscriptionForm

@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import lodash from 'lodash'
+import PropTypes from 'prop-types';
+import lodash from 'lodash';
 
 
 function Footer(props) {

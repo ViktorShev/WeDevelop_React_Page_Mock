@@ -1,4 +1,4 @@
-import NewsletterSubscriptionForm from "../Newsletter/Newsletter.js";
+import NewsletterSubscriptionForm from "../Newsletter/Newsletter.js"
 
 
 function NewsletterContainer() {

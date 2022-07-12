@@ -1,5 +1,5 @@
-import randomListItem from '../utils/randomListItem.js'
-import postImage from '../img/postImage.jpg'
+import randomListItem from '../utils/randomListItem.js';
+import postImage from '../img/postImage.jpg';
 
 export default function useGetPosts (numberOfPosts) {
   const posts = []
