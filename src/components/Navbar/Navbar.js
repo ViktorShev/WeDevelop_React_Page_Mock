@@ -14,8 +14,8 @@ function Navbar(props) {
         <a href='/'><img src={NavbarIconSource} alt="" /></a>
       </div>
       <div>
-        {links.map((link, _) => {
-          return <a href={link.url}>{link.linkName}</a>
+        {links.map((link, i) => {
+          return <a key={i} href={link.url}>{link.linkName}</a>
         })}
       </div>
       <div>

@@ -9,8 +9,8 @@ function Breadcrumb(props) {
   return (
     <div>
       <span>Categories: </span>
-      {categories.map((category, _) => {
-        return <a href={category.url}><button>{category.categoryName}</button></a>
+      {categories.map((category, i) => {
+        return <a key={i} href={category.url}><button>{category.categoryName}</button></a>
       })}
     </div>
   )

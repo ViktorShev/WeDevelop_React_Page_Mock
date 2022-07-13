@@ -15,8 +15,8 @@ function Footer(props) {
   return (
     <div>
       <div>
-        {footerTopImagesSource.map((url, _) => {
-          return <img src={url} alt="" />
+        {footerTopImagesSource.map((url, i) => {
+          return <img key={i} src={url} alt="" />
         })}
       </div>
       <div>
@@ -29,8 +29,8 @@ function Footer(props) {
         <span>5.0</span><span>/5.0</span>
       </div>
       <div>
-        {lodash.times((rating.rating)).map(() => {
-          return <img src={rating.ratingStarImgSource} alt="" />
+        {lodash.times((rating.rating)).map((_, i) => {
+          return <img key={i} src={rating.ratingStarImgSource} alt="" />
         })}
         <span>4 reviews</span>
       </div>
@@ -82,8 +82,8 @@ function Footer(props) {
         <span>Privacy Policy | © 2021 WeDevelop LLC, All rights reserved</span>
       </div>
       <div>
-        {socialMedia.map((socialNetwork, _) => {
-          return <a href={socialNetwork.urlToSocialMediaHandle}><button><img src={socialNetwork.socialMediaIconSource} alt="" /></button></a>
+        {socialMedia.map((socialNetwork, i) => {
+          return <a key={i} href={socialNetwork.urlToSocialMediaHandle}><button><img src={socialNetwork.socialMediaIconSource} alt="" /></button></a>
         })}
       </div>
     </div>
