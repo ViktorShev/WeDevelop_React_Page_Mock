@@ -1,0 +1,24 @@
+.sectionInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.sectionTitle {
+  font-family: 'Inter';
+  font-size: 13px;
+  letter-spacing: 1em;
+  opacity: 50%;
+}
+
+.sectionTopic {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.separator {
+  width: 100px;
+  height: 10px;
+  background: #FFC331;
+}
