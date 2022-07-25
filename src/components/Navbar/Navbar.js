@@ -9,18 +9,16 @@ function Navbar(props) {
   } = props
 
   return (
-    <div className='navbarContainer'>
-      <div className='navbarImageContainer'>
+    <div className='navbar'>
+      <div className='navbarImage'>
         <a href='/'><img src={NavbarIconSource} alt="" /></a>
       </div>
-      <div className='linksContainer'>
+      <div className='links'>
         {links.map((link, i) => {
           return <a key={i} href={link.url}>{link.linkName}</a>
         })}
       </div>
-        <div>
-          <button onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
-        </div>
+        <button className='getInTouchButton' onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
     </div>
   )
 }

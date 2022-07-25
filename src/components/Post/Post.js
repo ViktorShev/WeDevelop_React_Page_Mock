@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './Post.css'
 
 
 function Post(props) {
@@ -11,12 +12,12 @@ function Post(props) {
   } = props
 
   return (
-    <button onClick={() => onClick()}>
-      <img src={postImageURL} alt=""/>
-      <div>
-        <span>{postTopic}</span>
-        <span>{postTitle}</span>
-        <span>{postAuthor}</span>
+    <button className='post' onClick={() => onClick()}>
+      <img className='postImage' src={postImageURL} alt=""/>
+      <div className='postInfo'>
+        <span className='postTopic'>{postTopic}</span>
+        <span className='postTitle'>{postTitle}</span>
+        <span className='postAuthor'>{postAuthor}</span>
       </div>
     </button>
   )
