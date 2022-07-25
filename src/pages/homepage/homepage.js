@@ -19,7 +19,7 @@ export default function Homepage() {
         {categoryName: 'Coding', url: '/coding'}
         ]}>
       </Breadcrumb>
-      <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={postSectionOnePosts} viewAllButton={null} onPostClick={() => {console.log('A post has been clicked!')}} />
+      <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={postSectionOnePosts} id="featured" onPostClick={() => {console.log('A post has been clicked!')}} />
       <PostSection postSectionTitle="PROJECTS" postsTopic="Business Research" posts={postSectionTwoPosts} viewAllButton={<ViewAllButton url="/"/>} onPostClick={() => {console.log('A post has been clicked!')}} />
       <PostSection postSectionTitle="TECHNOLOGIES & TRENDS" postsTopic="Coding" posts={postSectionThreePosts} viewAllButton={<ViewAllButton url="/coding"/>} onPostClick={() => {console.log('A post has been clicked!')}} />
       <NewsletterContainer />

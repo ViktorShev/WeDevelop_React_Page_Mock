@@ -26,7 +26,7 @@ function Layout(props) {
   const rating = useGetRating()
 
   return (
-    <div>
+    <>
       <Navbar 
         NavbarIconSource={wedevelopLogo} links={[
         {linkName: 'Services', url: '/'},
@@ -60,7 +60,7 @@ function Layout(props) {
           {socialMediaIconSource: instagram, urlToSocialMediaHandle:'#'}
         ]}
       />
-    </div>
+    </>
   )
 }
 

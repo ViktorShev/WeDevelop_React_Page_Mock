@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Post from '../Post/Post.js';
+import './PostSection.css'
 
 
 function PostSection(props) {
@@ -12,19 +13,18 @@ function PostSection(props) {
   } = props
 
   return (
-    <div>
-      <div>
-        <span>{postSectionTitle}</span>
+    <div className='postSection'>
+      <div className='sectionInfo'>
+        <div className='sectionTitle'>{postSectionTitle}</div>
+        <div className='sectionTopic'>{postsTopic}</div>
+        <div className='separator'></div>
       </div>
-      <div>
-        <span>{postsTopic}</span>
-      </div>
-      {posts.map((post, _) => {
-        return (
-            <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
-        )
-      })}
-      {viewAllButton}
+        {posts.map((post, _) => {
+          return (
+              <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
+          )
+        })}
+        {viewAllButton}
     </div>
   )
 }
@@ -38,7 +38,7 @@ PostSection.propTypes = {
     postAuthor: PropTypes.string,
     postImageURL: PropTypes.string
   })),
-  viewAllButton: PropTypes.oneOfType([PropTypes.element, PropTypes.oneOf([null])]),
+  viewAllButton: PropTypes.element,
   onPostClick: PropTypes.func.isRequired
 }
 
