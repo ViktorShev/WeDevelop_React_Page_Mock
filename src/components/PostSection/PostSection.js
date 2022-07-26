@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Post from '../Post/Post.js';
-import './PostSection.css'
+import './PostSection.scss'
 
 
 function PostSection(props) {
@@ -13,7 +13,7 @@ function PostSection(props) {
   } = props
 
   return (
-    <div className='postSection'>
+    <div className='postSectionContainer'>
       <div className='sectionInfo'>
         <div className='sectionTitle'>{postSectionTitle}</div>
         <div className='sectionTopic'>{postsTopic}</div>

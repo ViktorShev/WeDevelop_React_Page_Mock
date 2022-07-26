@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Navbar.css'
+import './Navbar.scss'
 
 function Navbar(props) {
   const {
@@ -17,8 +17,8 @@ function Navbar(props) {
         {links.map((link, i) => {
           return <a key={i} href={link.url}>{link.linkName}</a>
         })}
-      </div>
         <button className='getInTouchButton' onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
+      </div>
     </div>
   )
 }

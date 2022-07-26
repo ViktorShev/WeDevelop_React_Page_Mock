@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import './Breadcrumb.scss'
 
 function Breadcrumb(props) {
   const {
@@ -7,10 +7,10 @@ function Breadcrumb(props) {
   } = props
 
   return (
-    <div>
-      <span>Categories: </span>
+    <div className='breadcrumb'>
+      <span className='breadcrumbCategoriesText'>Categories </span>
       {categories.map((category, i) => {
-        return <a key={i} href={category.url}><button>{category.categoryName}</button></a>
+        return <button key={i}><a href={category.url}>{category.categoryName}</a></button>
       })}
     </div>
   )

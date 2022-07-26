@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Post.css'
+import './Post.scss'
 
 
 function Post(props) {
