@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 5px 8px rgba(175, 138, 138, 0.2);
+  min-height: 85px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.links a {
+  padding: 25px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.links a:hover {
+  background:url(../../img/navBarSelector.png) bottom no-repeat;
+}
+
+/**.links a:hover {
+  border-bottom: 4px solid #377DFF;
+  transition: 250ms;
+}**/
+
+.links button {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #377DFF;
+  color: white;
+  transition: outline 500ms;
+  padding: 10px 20px;
+}
+
+.links button:hover {
+  outline: 1px solid black;
+}
