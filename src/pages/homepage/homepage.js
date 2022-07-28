@@ -7,8 +7,8 @@ import ViewAllButton from "../../components/ViewAllButton/ViewAllButton.js";
 
 export default function Homepage() {
   const postSectionOnePosts = useGetPosts(3)
-  const postSectionTwoPosts = useGetPosts(3)
-  const postSectionThreePosts = useGetPosts(3)
+  const postSectionTwoPosts = useGetPosts(4)
+  const postSectionThreePosts = useGetPosts(6)
 
   return (
     <Layout>
@@ -20,9 +20,9 @@ export default function Homepage() {
       ]}>
     </Breadcrumb>
     <div className="postSectionsContainer">
-      <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={postSectionOnePosts} onPostClick={() => {console.log('A post has been clicked!')}} />
-      <PostSection postSectionTitle="PROJECTS" postsTopic="Business Research" posts={postSectionTwoPosts} onPostClick={() => {console.log('A post has been clicked!')}} />
-      <PostSection postSectionTitle="TECHNOLOGIES & TRENDS" postsTopic="Coding" posts={postSectionThreePosts} onPostClick={() => {console.log('A post has been clicked!')}} />
+      <PostSection postSectionTitle="FEATURED" postsTopic="Latest Posts" posts={postSectionOnePosts} sectionID={'featured'} onPostClick={() => {console.log('A post has been clicked!')}} />
+      <PostSection postSectionTitle="PROJECTS" postsTopic="Business Research" posts={postSectionTwoPosts} sectionID={'projects'} onPostClick={() => {console.log('A post has been clicked!')}} />
+      <PostSection postSectionTitle="TECHNOLOGIES & TRENDS" postsTopic="Coding" posts={postSectionThreePosts} sectionID={'coding'} onPostClick={() => {console.log('A post has been clicked!')}} />
     </div>
     <NewsletterContainer />
     </Layout>

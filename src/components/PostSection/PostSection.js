@@ -9,6 +9,7 @@ function PostSection(props) {
     postsTopic,
     posts,
     viewAllButton,
+    sectionID,
     onPostClick
   } = props
 
@@ -19,12 +20,16 @@ function PostSection(props) {
         <div className='sectionTopic'>{postsTopic}</div>
         <div className='separator'></div>
       </div>
+      <div className='postsGrid' id={sectionID}>
         {posts.map((post, _) => {
           return (
-              <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
+            <div className='post'>
+             <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}/>
+            </div>
           )
         })}
         {viewAllButton}
+      </div>
     </div>
   )
 }
@@ -39,6 +44,7 @@ PostSection.propTypes = {
     postImageURL: PropTypes.string
   })),
   viewAllButton: PropTypes.element,
+  sectionID: PropTypes.string,
   onPostClick: PropTypes.func.isRequired
 }
 

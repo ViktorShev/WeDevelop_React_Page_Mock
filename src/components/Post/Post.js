@@ -11,15 +11,16 @@ function Post(props) {
     onClick,
   } = props
 
+
   return (
-    <button className='post' onClick={() => onClick()}>
+    <div className='clickablePost' onClick={() => onClick()}>
       <img className='postImage' src={postImageURL} alt=""/>
-      <div className='postInfo'>
-        <span className='postTopic'>{postTopic}</span>
-        <span className='postTitle'>{postTitle}</span>
-        <span className='postAuthor'>{postAuthor}</span>
-      </div>
-    </button>
+        <div className='postInfo'>
+          <span className='postTopic'>{postTopic}</span>
+          <span className='postTitle'>{postTitle}</span>
+          <span className='postAuthor'>By {postAuthor}</span>
+        </div>
+    </div>
   )
 }
 

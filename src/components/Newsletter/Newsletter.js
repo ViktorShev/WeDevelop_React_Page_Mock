@@ -11,7 +11,7 @@ function NewsletterSubscriptionForm(props) {
     <>
       <div className='newsletter'>
         <span className='newsletterHeader'>NEWSLETTER</span>
-        <h1 className='newsletterIntro'>Subscribe to our newsletter</h1>
+        <h1>Subscribe to our newsletter</h1>
         <div className='separator'></div>
         <form className='newsletterSubscriptionForm'>
           <input type="email" placeholder="Email" id="email-field"></input>
