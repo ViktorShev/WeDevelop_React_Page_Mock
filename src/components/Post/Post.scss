@@ -1,4 +1,5 @@
 .clickablePost {
+  display: grid;
   width: 100%;
   height: 100%;
 }
@@ -8,6 +9,8 @@
 }
 
 .clickablePost img {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
   border-radius: 5px;
   display: block;
   width: 100%;
@@ -16,17 +19,27 @@
 }
 
 .postInfo {
-  overflow: hidden;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  gap: 10px;
+  align-self: end;
   display: flex;
   flex-flow: column;
-  min-width: auto;
+  align-items: flex-start;
+  padding: 40px;
 }
 
 .postTopic {
   padding: 10px 20px;
-  height: 37px;
+  height: 20px;
   background: #FFFFFF;
   border: 1px solid #E1E1E1;
+  border-radius: 100px;
+  transition: box-shadow 200ms;
+}
+
+.postTopic:hover {
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
 }
 
