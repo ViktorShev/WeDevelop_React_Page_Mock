@@ -7,7 +7,7 @@ import footerTopImg2 from '../../img/footerTopImg2.png';
 import footerTopImg3 from '../../img/footerTopImg3.png';
 import footerTopImg4 from '../../img/footerTopImg4.png';
 import clutch from '../../img/clutch.png';
-import wedevelopLogo from '../../img/wedevelopLogo.svg';
+import desktopWeDevelopLogo from '../../img/desktopWeDevelopLogo.svg';
 import arrow from '../../img/arrow.png';
 import email from '../../img/email.png';
 import location from '../../img/location.png';
@@ -28,7 +28,7 @@ function Layout(props) {
   return (
     <>
       <Navbar 
-        NavbarIconSource={wedevelopLogo} links={[
+        NavbarIconSource={desktopWeDevelopLogo} links={[
         {linkName: 'Services', url: '/'},
         {linkName: 'About us', url: '/'},
         {linkName: 'Testimonials', url: '/'},
@@ -45,7 +45,7 @@ function Layout(props) {
           footerTopImg3,
           footerTopImg4
         ]}
-        footerIconSource={wedevelopLogo}
+        footerIconSource={desktopWeDevelopLogo}
         footerLinkDecorationImagesSource={{
           arrow: arrow,
           email: email,
