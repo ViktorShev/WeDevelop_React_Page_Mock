@@ -8,6 +8,7 @@ import footerTopImg3 from '../../img/footerTopImg3.png';
 import footerTopImg4 from '../../img/footerTopImg4.png';
 import clutch from '../../img/clutch.png';
 import desktopWeDevelopLogo from '../../img/desktopWeDevelopLogo.svg';
+import mobileWeDevelopLogo from '../../img/mobileWeDevelopLogo.svg'
 import arrow from '../../img/arrow.png';
 import email from '../../img/email.png';
 import location from '../../img/location.png';
@@ -28,7 +29,9 @@ function Layout(props) {
   return (
     <>
       <Navbar 
-        NavbarIconSource={desktopWeDevelopLogo} links={[
+        navbarDesktopIconSource={desktopWeDevelopLogo}
+        navbarMobileIconSource={mobileWeDevelopLogo} 
+        links={[
         {linkName: 'Services', url: '/'},
         {linkName: 'About us', url: '/'},
         {linkName: 'Testimonials', url: '/'},

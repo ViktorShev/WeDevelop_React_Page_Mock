@@ -1,30 +1,60 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import classNames from 'classnames'
+import mobileMenu from '../../img/mobileMenu.svg';
+import mobileMenuClose from '../../img/mobileMenuClose.svg'
 import './Navbar.scss'
 
 function Navbar(props) {
   const {
-    NavbarIconSource,
+    navbarDesktopIconSource,
+    navbarMobileIconSource,
     links,
     onGetInTouchButtonClick
   } = props
 
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const showMobileMenuContent = classNames('mobileMenuContent', {'--show': menuIsOpen})
+  
   return (
     <div className='navbar'>
       <div className='navbarImage'>
-        <a href='/'><img src={NavbarIconSource} alt="" /></a>
+        <a className='desktop' href='/'><img src={navbarDesktopIconSource} alt="" /></a>
+        <a className='mobile' href='/'><img src={navbarMobileIconSource} alt="" /></a>
       </div>
       <div className='links'>
         {links.map((link, i) => {
           return <a key={i} href={link.url}>{link.linkName}</a>
         })}
-        <button className='getInTouchButton' onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
+        <button onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
+      </div>
+      <div className='mobileMenu'>
+        <button onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={mobileMenu} alt=''/></button>
+          <div className={showMobileMenuContent}>
+            <div class='mobileMenuTop'>
+              <a className='mobile' href='/'><img src={navbarMobileIconSource} alt="" /></a>
+              <button onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={mobileMenuClose} alt=''/></button>
+            </div>
+            <div className='mobileLinks'>
+            {links.map((link, i) => {
+              return (
+                <>
+                  <a key={i} href={link.url}>{link.linkName}</a>
+                  <hr />
+                </>
+              )
+            })}
+            <button onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
+            </div>
+          </div>
       </div>
     </div>
   )
 }
 
 Navbar.propTypes = {
-  NavbarIconSource: PropTypes.string,
+  navbarDesktopIconSource: PropTypes.string,
+  navbarMobileIconSource: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.shape({
     linkName: PropTypes.string,
     url: PropTypes.string
