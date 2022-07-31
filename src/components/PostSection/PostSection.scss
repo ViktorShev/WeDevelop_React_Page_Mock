@@ -38,8 +38,8 @@
   grid-row: 1 / span 2;
 }
 
-
 .sectionInfo {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -56,4 +56,15 @@
   font-family: 'Inter';
   font-weight: 600;
   font-size: 60px;
+}
+
+.sectionInfo a {
+  position: absolute;
+  top: 140px;
+  right: 0px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  color: #377DFF;
 }

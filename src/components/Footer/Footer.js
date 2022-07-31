@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import lodash from 'lodash';
+import dotsPattern from '../../img/footerDotsPattern.svg'
+import bottomShadow from '../../img/footerBottomShadow.svg'
 import './Footer.scss'
 
 
@@ -82,6 +84,8 @@ function Footer(props) {
           return <button><a key={i} href={socialNetwork.urlToSocialMediaHandle}><img src={socialNetwork.socialMediaIconSource} alt="" /></a></button>
         })}
         </div>
+        <img className='footerDotsPattern' src={dotsPattern} alt=""/>
+        <img className='footerBottomShadow' src={bottomShadow} alt=""/>
       </div>
     </>
   )

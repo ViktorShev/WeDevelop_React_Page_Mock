@@ -1,9 +1,22 @@
 .newsletter {
+  position: relative;
   margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
+}
+
+.leftDotsPattern {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+.rightDotsPattern {
+  position: absolute;
+  top: 60px;
+  right: 0px;
 }
 
 .newsletterHeader {

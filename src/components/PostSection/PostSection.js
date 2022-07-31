@@ -16,6 +16,7 @@ function PostSection(props) {
   return (
     <div className='postSectionContainer'>
       <div className='sectionInfo'>
+        {viewAllButton}
         <div className='sectionTitle'>{postSectionTitle}</div>
         <div className='sectionTopic'>{postsTopic}</div>
         <div className='separator'></div>
@@ -28,7 +29,6 @@ function PostSection(props) {
             </div>
           )
         })}
-        {viewAllButton}
       </div>
     </div>
   )
