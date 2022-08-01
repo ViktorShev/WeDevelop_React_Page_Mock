@@ -85,8 +85,6 @@
 
 .companyServices {
   display: grid;
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .companyTechnologies span {
@@ -96,8 +94,6 @@
 .companyTechnologies {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-column-start: 4;
-  grid-column-end: 5;
 }
 
 .companyContact span {
@@ -106,8 +102,38 @@
 
 .companyContact {
   display: grid;
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-column: 5;
+}
+
+@media (max-width: 1000px) {
+  .footerGrid {
+    grid-row-gap: 50px;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .companyReview {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    align-items: center;
+    grid-column: 3;
+  }
+
+  .companyInfo {
+    grid-row: 2;
+  }
+
+  .companyServices {
+    grid-row: 2;
+  }
+
+  .companyTechnologies {
+    grid-row: 2;
+  }
+
+  .companyContact {
+    grid-row: 2;
+    grid-column: 4;
+  }
 }
 
 .footerBottom {
