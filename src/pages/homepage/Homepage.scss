@@ -20,3 +20,14 @@
   left: 0px;
   z-index: -1;
 }
+
+@media (max-width: 950px) {
+  .featuredDotsPattern {
+    right: 8px;
+  }
+
+  .featuredLeftCircle {
+    left: -75px;
+    top: 275px;
+  }
+}

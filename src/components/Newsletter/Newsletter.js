@@ -14,7 +14,7 @@ function NewsletterSubscriptionForm(props) {
         <img className='leftDotsPattern' src={dotsPattern} alt=""/>
         <img className='rightDotsPattern' src={dotsPattern} alt=""/>
         <span className='newsletterHeader'>NEWSLETTER</span>
-        <h1>Subscribe to our newsletter</h1>
+        <h1><span className='subscribeTo'>Subscribe to</span><span className='mobileText'>our newsletter</span><span className='desktopText'> our newsletter</span></h1>
         <div className='separator'></div>
         <form className='newsletterSubscriptionForm'>
           <input type="email" placeholder="Email" id="email-field"></input>
