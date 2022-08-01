@@ -66,7 +66,7 @@
 .sectionInfo {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   row-gap: 30px;
 }
 
@@ -95,21 +95,26 @@
 }
 
 @media (max-width: 950px) {
+
   .sectionTopic {
     font-size: 48px;
   }
 
   .sectionInfo a {
-    top: 130px;
+    top: 125px;
   }
 
   @media (max-width: 700px) {
+    .sectionTitle {
+      font-size: 10px;
+    }
+    
     .sectionTopic {
       font-size: 44px;
     }
 
     .sectionInfo a {
-      top: 125px;
+      top: 120px;
     }
   }
 
@@ -119,7 +124,7 @@
     }
 
     .sectionInfo a {
-      top: 115px;
+      top: 112px;
     }
   }
 
@@ -129,7 +134,7 @@
     }
 
     .sectionInfo a {
-      top: 110px;
+      top: 105px;
     }
   }
 
@@ -139,7 +144,7 @@
     }
 
     .sectionInfo a {
-      top: 100px;
+      top: 97px;
     }
   }
 }
