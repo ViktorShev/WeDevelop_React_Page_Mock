@@ -13,8 +13,8 @@ function Navbar(props) {
     onGetInTouchButtonClick
   } = props
 
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const showMobileMenuContent = classNames('mobileMenuContent', {'--show': menuIsOpen})
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const showMobileMenuContent = classNames('mobileMenuContent', {'--show': isMenuOpen})
   
   return (
     <div className='navbar'>
@@ -29,11 +29,11 @@ function Navbar(props) {
         <button onClick={() => onGetInTouchButtonClick()}>Get in touch</button>
       </div>
       <div className='mobileMenu'>
-        <button onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={mobileMenu} alt=''/></button>
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={mobileMenu} alt=''/></button>
           <div className={showMobileMenuContent}>
             <div class='mobileMenuTop'>
               <a className='mobile' href='/'><img src={navbarMobileIconSource} alt="" /></a>
-              <button onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={mobileMenuClose} alt=''/></button>
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={mobileMenuClose} alt=''/></button>
             </div>
             <div className='mobileLinks'>
             {links.map((link, i) => {
