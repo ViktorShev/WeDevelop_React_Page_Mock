@@ -1,0 +1,255 @@
+@mixin fadedText {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 50%;
+}
+
+.footerImages {
+  margin-bottom: 105px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footerImage {
+  overflow: auto;
+}
+
+.footer {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 105px;
+  display: grid;
+  justify-items: center;
+}
+
+.footer a {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.companyReview {
+  display: grid;
+}
+
+.companyLogo {
+  margin-bottom: 25px;
+}
+
+.reviewedOn span {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 6.5px;
+}
+
+.ratingLeftNumber {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.ratingSeparator {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 19px;
+  opacity: 15%;
+}
+
+.ratingRightNumber {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.amountOfReviews {
+  font-weight: 400;
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  column-gap: 100px
+}
+
+@media (max-width: 1120px) {
+  .footer {
+    display: block;
+  }
+
+  .companyReview {
+    display: flex;
+    justify-content: center;
+    column-gap: 70px;
+  }
+
+  .footerLinks {
+    margin-top: 50px;
+    column-gap: 50px;
+  }
+
+  .footerLinks .companyInfo {
+    row-gap: 7px;
+    margin: 0px;
+  }
+
+  .companyServices {
+    row-gap: 7px;
+  }
+
+  .companyTechnologies {
+    row-gap: 7px ;
+    column-gap: 15px ;
+  }
+
+  .companyContact {
+    row-gap: 7px;
+  }
+}
+
+@media (max-width: 660px) {
+  .companyReview {
+    display: block;
+  }
+
+  .footer {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  .footerLinks .companyTechnologies {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  .footerLinks .companyTechnologies a:last-child {
+    display: none;
+  }
+
+  .footerBottom .footerBottomShadow {
+    display: none;
+  }
+
+  .footerBottom .mobileFooterBottomShadow {
+    display: block
+  }
+}
+
+.companyInfo span {
+  @include fadedText;
+}
+
+.companyInfo {
+  margin-left: 10px;
+  display: grid;
+}
+
+.companyServices span {
+  @include fadedText;
+}
+
+.companyServices {
+  display: grid;
+}
+
+.companyTechnologies span {
+  @include fadedText;
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.companyTechnologies {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.companyTechnologies a:last-child {
+  color: #377DFF;
+  grid-row: 5;
+  grid-column: 2;
+}
+
+.companyContact span {
+  @include fadedText;
+}
+
+.companyContact {
+  display: grid;
+  grid-column: 4;
+}
+
+.footerBottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px
+}
+
+.footerBottom span {
+  @include fadedText;
+}
+
+.socialMedia button {
+  background-color: transparent;
+  border: none;
+  opacity: 40%;
+}
+
+.seeMoreArrow {
+  padding-left: 5px
+}
+
+.emailIcon {
+  padding-right: 10px
+}
+
+.locationIcon {
+  padding-right: 10px;
+}
+
+.phoneIcon {
+  padding-right: 10px;
+}
+
+.footerDotsPattern {
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+}
+
+@media (max-width: 1270px) {
+  .footerDotsPattern {
+    display: none;
+  }
+}
+
+.footerBottomShadow {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.mobileFooterBottomShadow {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+}

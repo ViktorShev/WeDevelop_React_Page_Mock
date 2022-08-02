@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Post from '../Post/Post.js';
+import './PostSection.scss'
 
 
 function PostSection(props) {
@@ -8,23 +9,27 @@ function PostSection(props) {
     postsTopic,
     posts,
     viewAllButton,
+    sectionID,
     onPostClick
   } = props
 
   return (
-    <div>
-      <div>
-        <span>{postSectionTitle}</span>
+    <div className='postSectionContainer'>
+      <div className='sectionInfo'>
+        {viewAllButton}
+        <div className='sectionTitle'>{postSectionTitle}</div>
+        <div className='sectionTopic'>{postsTopic}</div>
+        <div className='separator'></div>
       </div>
-      <div>
-        <span>{postsTopic}</span>
+      <div className='postsGrid' id={sectionID}>
+        {posts.map((post, _) => {
+          return (
+            <div className='post'>
+             <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}/>
+            </div>
+          )
+        })}
       </div>
-      {posts.map((post, _) => {
-        return (
-            <Post key={post.postTitle} postTopic={post.postTopic} postTitle={post.postTitle} postAuthor={post.postAuthor} postImageURL={post.postImageURL} onClick={onPostClick}></Post>
-        )
-      })}
-      {viewAllButton}
     </div>
   )
 }
@@ -38,7 +43,8 @@ PostSection.propTypes = {
     postAuthor: PropTypes.string,
     postImageURL: PropTypes.string
   })),
-  viewAllButton: PropTypes.oneOfType([PropTypes.element, PropTypes.oneOf([null])]),
+  viewAllButton: PropTypes.element,
+  sectionID: PropTypes.string,
   onPostClick: PropTypes.func.isRequired
 }
 

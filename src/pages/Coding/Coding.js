@@ -10,7 +10,9 @@ export default function Coding() {
   return (
     <Layout>
       <BackToBlogButton url="/"/>
-      <PostSection postSectionTitle="CATEGORY" postsTopic="Coding" posts={codingPosts} viewAllButton={null} onPostClick={() => {console.log('A post has been clicked!')}}/>
+      <div className="postSectionsContainer">
+        <PostSection postSectionTitle="CATEGORY" postsTopic="Coding" posts={codingPosts} sectionID={'coding'} onPostClick={() => {console.log('A post has been clicked!')}}/>
+      </div>
       <NewsletterContainer />
     </Layout>
   )

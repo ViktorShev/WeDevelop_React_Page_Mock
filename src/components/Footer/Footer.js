@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types';
 import lodash from 'lodash';
+import dotsPattern from '../../img/footerDotsPattern.svg'
+import bottomShadow from '../../img/footerBottomShadow.svg'
+import mobileBottomShadow from '../../img/mobileFooterBottomShadow.svg'
+import './Footer.scss'
 
 
 function Footer(props) {
@@ -13,80 +17,81 @@ function Footer(props) {
   } = props
 
   return (
-    <div>
-      <div>
-        {footerTopImagesSource.map((url, _) => {
-          return <img src={url} alt="" />
+    <>
+      <div className='footerImages'>
+        {footerTopImagesSource.map((url, i) => {
+          return <img className='footerImage' key={i} src={url} alt="" />
         })}
       </div>
-      <div>
-        <img src={footerIconSource} alt="" />
-      </div>
-      <div>
-        <span>REVIEWED ON</span>
-      </div>
-      <div>
-        <span>5.0</span><span>/5.0</span>
-      </div>
-      <div>
-        {lodash.times((rating.rating)).map(() => {
-          return <img src={rating.ratingStarImgSource} alt="" />
-        })}
-        <span>4 reviews</span>
-      </div>
-      <div>
-        <a href='https://clutch.co/profile/wedevelop?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo#summary' target='_blank' rel='noreferrer'><img src={revieweesIconSource} alt="" /></a>
-      </div>
-      <div>
-        <div>
-          <span>COMPANY</span>
-          <a href='/'>About us</a>
-          <a href='/'>Our Team</a>
-          <a href='/'>Blog</a>
-          <a href='/'>Career</a>
+      <div className='footer'>
+        <div className='companyReview'>
+          <div className='companyLogo'>
+            <img src={footerIconSource} alt="" />
+          </div>
+          <div className='review'>
+            <div className='reviewedOn'>
+              <span>REVIEWED ON</span>
+            </div>
+            <div className='reviewRating'>
+              <span className='ratingLeftNumber'>5.0</span><span className='ratingSeparator'>/</span><span className='ratingRightNumber'>5.0</span>
+            </div>
+            <div className='reviewStars'>
+              {lodash.times((rating.rating)).map((_, i) => {
+                return <img key={i} src={rating.ratingStarImgSource} alt="" />
+              })}
+              <span className='amountOfReviews'>4 reviews</span>
+            </div>
+            <div className='revieweeLogo'>
+              <a href='https://clutch.co/profile/wedevelop?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo#summary' target='_blank' rel='noreferrer'><img src={revieweesIconSource} alt="" /></a>
+            </div>
+          </div>
         </div>
-        <div>
-          <span>SERVICES</span>
-          <a href='/'>Web Development</a>
-          <a href='/'>Staff Augmentation</a>
-          <a href='/'>Tailor Made</a>
-        </div>
-        <div>
-          <span>Technologies</span>
-          <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
-          <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">Node.js</a>
-          <a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a>
-          <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">AWS</a>
-          <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>
-        </div>
-        <div>
-          <a href="https://rubyonrails.org/" >Ruby on Rails</a>
-          <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a>
-          <a href="https://www.mongodb.com/en" target="_blank" rel="noreferrer">MongoDB</a>
-        </div>
-        <div>
-          <a href="/">See More</a>
-          <img src={footerLinkDecorationImages.arrow} alt="" />
-        </div>
-        <div>
-          <span>CONTACT US</span>
-          <img src={footerLinkDecorationImages.email} alt=""/>
-          <a href="/">info@wedevelop.me</a>
-          <img src={footerLinkDecorationImages.location} alt="" />
-          <a href="/">WeDevelop LLC FL 33134, US</a>
-          <img src={footerLinkDecorationImages.phone} alt="" />
-          <a href="/">+1 (925) 448-6165</a>
+        <div className='footerLinks'>
+          <div className='companyInfo'>
+            <span>COMPANY</span>
+            <a href='/'>About us</a>
+            <a href='/'>Our Team</a>
+            <a href='/'>Blog</a>
+            <a href='/'>Career</a>
+          </div>
+          <div className='companyServices'>
+            <span>SERVICES</span>
+            <a href='/'>Web Development</a>
+            <a href='/'>Staff Augmentation</a>
+            <a href='/'>Tailor Made</a>
+          </div>
+          <div className='companyTechnologies'>
+            <span>TECHNOLOGIES</span>
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
+            <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">Node.js</a>
+            <a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">AWS</a>
+            <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>
+            <a href="https://rubyonrails.org/" >Ruby on Rails</a>
+            <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a>
+            <a href="https://www.mongodb.com/en" target="_blank" rel="noreferrer">MongoDB</a>
+            <a href="/">See More<img className='seeMoreArrow' src={footerLinkDecorationImages.arrow} alt="" /></a>
+          </div>
+          <div className='companyContact'>
+            <span>CONTACT US</span>
+            <a href="/"><img className='emailIcon' src={footerLinkDecorationImages.email} alt=""/>info@wedevelop.me</a>
+            <a href="/"><img className='locationIcon' src={footerLinkDecorationImages.location} alt="" />WeDevelop LLC FL 33134, US</a>
+            <a href="/"><img className='phoneIcon' src={footerLinkDecorationImages.phone} alt="" />+1 (925) 448-6165</a>
+          </div>
         </div>
       </div>
-      <div>
+      <div className='footerBottom'>
         <span>Privacy Policy | © 2021 WeDevelop LLC, All rights reserved</span>
-      </div>
-      <div>
-        {socialMedia.map((socialNetwork, _) => {
-          return <a href={socialNetwork.urlToSocialMediaHandle}><button><img src={socialNetwork.socialMediaIconSource} alt="" /></button></a>
+        <div className='socialMedia'>
+        {socialMedia.map((socialNetwork, i) => {
+          return <button><a key={i} href={socialNetwork.urlToSocialMediaHandle}><img src={socialNetwork.socialMediaIconSource} alt="" /></a></button>
         })}
+        </div>
+        <img className='footerDotsPattern' src={dotsPattern} alt=""/>
+        <img className='footerBottomShadow' src={bottomShadow} alt=""/>
+        <img className='mobileFooterBottomShadow' src={mobileBottomShadow} alt="" />
       </div>
-    </div>
+    </>
   )
 }
 

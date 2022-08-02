@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types'
+import dotsPattern from '../../img/newsLetterDotsPattern.svg'
+import './Newsletter.scss'
 
 
 function NewsletterSubscriptionForm(props) {
@@ -7,16 +9,19 @@ function NewsletterSubscriptionForm(props) {
   } = props
 
   return (
-    <div>
-      <div>
-        <span>NEWSLETTER</span>
-        <span>Subscribe to our newsletter</span>
-        <form>
+    <>
+      <div className='newsletter'>
+        <img className='leftDotsPattern' src={dotsPattern} alt=""/>
+        <img className='rightDotsPattern' src={dotsPattern} alt=""/>
+        <span className='newsletterHeader'>NEWSLETTER</span>
+        <h1><span className='subscribeTo'>Subscribe to</span><span className='mobileText'>our newsletter</span><span className='desktopText'> our newsletter</span></h1>
+        <div className='separator'></div>
+        <form className='newsletterSubscriptionForm'>
           <input type="email" placeholder="Email" id="email-field"></input>
           <button type="button" onClick={() => onSubscribeButtonClick()}>Subscribe</button>
         </form>
       </div>
-    </div>
+    </>
   )
 }
 
