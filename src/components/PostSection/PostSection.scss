@@ -1,6 +1,6 @@
 .postSectionsContainer {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: flex-start;
   margin-left: 150px;
   margin-right: 150px;
@@ -74,6 +74,7 @@
   font-family: 'Inter';
   font-size: 13px;
   letter-spacing: 1em;
+  line-height: 2em;
   opacity: 50%;
 }
 

@@ -31,12 +31,17 @@
 
 .postTopic {
   padding: 10px 20px;
-  height: 20px;
   background: #FFFFFF;
   border: 1px solid #E1E1E1;
   border-radius: 100px;
   transition: box-shadow 200ms;
   overflow: hidden;
+}
+
+@media (max-width: 615px) {
+  .postTopic {
+    padding: 4px 10px;
+  }
 }
 
 .postTopic:hover {

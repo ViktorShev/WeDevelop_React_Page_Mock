@@ -9,7 +9,7 @@
 
 .featuredDotsPattern {
   position: absolute;
-  top: 235px;
+  top: 240px;
   right: 95px;
   z-index: -1;
 }
@@ -23,11 +23,22 @@
 
 @media (max-width: 950px) {
   .featuredDotsPattern {
-    right: 8px;
+    right: 5px;
+  }
+  
+  @media (max-width: 615px) {
+    .featuredDotsPattern {
+      top: 247px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .featuredDotsPattern {
+      top: 240px;
+    }
   }
 
   .featuredLeftCircle {
-    left: -75px;
-    top: 275px;
+    display: none;
   }
 }

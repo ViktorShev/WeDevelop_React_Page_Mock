@@ -16,7 +16,7 @@
   overflow: auto;
 }
 
-.footerGrid {
+.footer {
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 105px;
@@ -24,9 +24,9 @@
   justify-items: center;
 }
 
-.footerGrid a {
+.footer a {
   font-family: 'Inter';
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   text-decoration: none;
   color: black;
@@ -71,11 +71,88 @@
   padding-left: 5px;
 }
 
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  column-gap: 100px
+}
+
+@media (max-width: 1120px) {
+  .footer {
+    display: block;
+  }
+
+  .companyReview {
+    display: flex;
+    justify-content: center;
+    column-gap: 70px;
+  }
+
+  .footerLinks {
+    margin-top: 50px;
+    column-gap: 50px;
+  }
+
+  .footerLinks .companyInfo {
+    row-gap: 7px;
+    margin: 0px;
+  }
+
+  .companyServices {
+    row-gap: 7px;
+  }
+
+  .companyTechnologies {
+    row-gap: 7px ;
+    column-gap: 15px ;
+  }
+
+  .companyContact {
+    row-gap: 7px;
+  }
+}
+
+@media (max-width: 660px) {
+  .companyReview {
+    display: block;
+  }
+
+  .footer {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  .footerLinks .companyTechnologies {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  .footerLinks .companyTechnologies a:last-child {
+    display: none;
+  }
+
+  .footerBottom .footerBottomShadow {
+    display: none;
+  }
+
+  .footerBottom .mobileFooterBottomShadow {
+    display: block
+  }
+}
+
 .companyInfo span {
   @include fadedText;
 }
 
 .companyInfo {
+  margin-left: 10px;
   display: grid;
 }
 
@@ -89,11 +166,19 @@
 
 .companyTechnologies span {
   @include fadedText;
+  grid-row: 1;
+  grid-column: 1 / span 2;
 }
 
 .companyTechnologies {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+}
+
+.companyTechnologies a:last-child {
+  color: #377DFF;
+  grid-row: 5;
+  grid-column: 2;
 }
 
 .companyContact span {
@@ -102,38 +187,7 @@
 
 .companyContact {
   display: grid;
-  grid-column: 5;
-}
-
-@media (max-width: 1000px) {
-  .footerGrid {
-    grid-row-gap: 50px;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .companyReview {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    align-items: center;
-    grid-column: 3;
-  }
-
-  .companyInfo {
-    grid-row: 2;
-  }
-
-  .companyServices {
-    grid-row: 2;
-  }
-
-  .companyTechnologies {
-    grid-row: 2;
-  }
-
-  .companyContact {
-    grid-row: 2;
-    grid-column: 4;
-  }
+  grid-column: 4;
 }
 
 .footerBottom {
@@ -160,15 +214,15 @@
 }
 
 .emailIcon {
-  padding-right: 5px
+  padding-right: 10px
 }
 
 .locationIcon {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .phoneIcon {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .footerDotsPattern {
@@ -177,7 +231,22 @@
   bottom: 50px;
 }
 
+@media (max-width: 1270px) {
+  .footerDotsPattern {
+    display: none;
+  }
+}
+
 .footerBottomShadow {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.mobileFooterBottomShadow {
+  display: none;
   position: absolute;
   top: 25px;
   right: 0px;

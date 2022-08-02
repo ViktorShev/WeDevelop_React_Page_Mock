@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import lodash from 'lodash';
 import dotsPattern from '../../img/footerDotsPattern.svg'
 import bottomShadow from '../../img/footerBottomShadow.svg'
+import mobileBottomShadow from '../../img/mobileFooterBottomShadow.svg'
 import './Footer.scss'
 
 
@@ -22,7 +23,7 @@ function Footer(props) {
           return <img className='footerImage' key={i} src={url} alt="" />
         })}
       </div>
-      <div className='footerGrid'>
+      <div className='footer'>
         <div className='companyReview'>
           <div className='companyLogo'>
             <img src={footerIconSource} alt="" />
@@ -45,36 +46,38 @@ function Footer(props) {
             </div>
           </div>
         </div>
-        <div className='companyInfo'>
-          <span>COMPANY</span>
-          <a href='/'>About us</a>
-          <a href='/'>Our Team</a>
-          <a href='/'>Blog</a>
-          <a href='/'>Career</a>
-        </div>
-        <div className='companyServices'>
-          <span>SERVICES</span>
-          <a href='/'>Web Development</a>
-          <a href='/'>Staff Augmentation</a>
-          <a href='/'>Tailor Made</a>
-        </div>
-        <div className='companyTechnologies'>
-          <span>TECHNOLOGIES</span>
-          <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
-          <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">Node.js</a>
-          <a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a>
-          <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">AWS</a>
-          <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>
-          <a href="https://rubyonrails.org/" >Ruby on Rails</a>
-          <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a>
-          <a href="https://www.mongodb.com/en" target="_blank" rel="noreferrer">MongoDB</a>
-          <a href="/">See More<img className='seeMoreArrow' src={footerLinkDecorationImages.arrow} alt="" /></a>
-        </div>
-        <div className='companyContact'>
-          <span>CONTACT US</span>
-          <a href="/"><img className='emailIcon' src={footerLinkDecorationImages.email} alt=""/>info@wedevelop.me</a>
-          <a href="/"><img className='locationIcon' src={footerLinkDecorationImages.location} alt="" />WeDevelop LLC FL 33134, US</a>
-          <a href="/"><img className='phoneIcon' src={footerLinkDecorationImages.phone} alt="" />+1 (925) 448-6165</a>
+        <div className='footerLinks'>
+          <div className='companyInfo'>
+            <span>COMPANY</span>
+            <a href='/'>About us</a>
+            <a href='/'>Our Team</a>
+            <a href='/'>Blog</a>
+            <a href='/'>Career</a>
+          </div>
+          <div className='companyServices'>
+            <span>SERVICES</span>
+            <a href='/'>Web Development</a>
+            <a href='/'>Staff Augmentation</a>
+            <a href='/'>Tailor Made</a>
+          </div>
+          <div className='companyTechnologies'>
+            <span>TECHNOLOGIES</span>
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
+            <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">Node.js</a>
+            <a href="https://www.python.org/" target="_blank" rel="noreferrer">Python</a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer">AWS</a>
+            <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>
+            <a href="https://rubyonrails.org/" >Ruby on Rails</a>
+            <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a>
+            <a href="https://www.mongodb.com/en" target="_blank" rel="noreferrer">MongoDB</a>
+            <a href="/">See More<img className='seeMoreArrow' src={footerLinkDecorationImages.arrow} alt="" /></a>
+          </div>
+          <div className='companyContact'>
+            <span>CONTACT US</span>
+            <a href="/"><img className='emailIcon' src={footerLinkDecorationImages.email} alt=""/>info@wedevelop.me</a>
+            <a href="/"><img className='locationIcon' src={footerLinkDecorationImages.location} alt="" />WeDevelop LLC FL 33134, US</a>
+            <a href="/"><img className='phoneIcon' src={footerLinkDecorationImages.phone} alt="" />+1 (925) 448-6165</a>
+          </div>
         </div>
       </div>
       <div className='footerBottom'>
@@ -86,6 +89,7 @@ function Footer(props) {
         </div>
         <img className='footerDotsPattern' src={dotsPattern} alt=""/>
         <img className='footerBottomShadow' src={bottomShadow} alt=""/>
+        <img className='mobileFooterBottomShadow' src={mobileBottomShadow} alt="" />
       </div>
     </>
   )
